@@ -1,12 +1,11 @@
 <template>
-  <div>
-    <div class="flex flex-nowrap flex-row gap-0.5">
+    <div class="flex flex-row gap-0.5">
       <div
         class="
           h-5
           w-5
           p-4
-          flex flex-col
+          flex
           justify-center
           items-center
           flex-shrink-0
@@ -21,7 +20,7 @@
             h-5
             w-5
             p-4
-            flex flex-col
+            flex
             justify-center
             items-center
             flex-shrink-0
@@ -34,7 +33,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>

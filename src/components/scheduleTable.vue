@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="flex flex-col gap-0.5 flex-nowrap">
     <HourBar />
-    <div class="container max-h-48 max-w-40 overflow-y-auto">
+    <div class="container max-h-48 overflow-y-auto">
       <div
         v-for="index in 15"
         :key="index"
-        class="flex flex-nowrap flex-row gap-0.5"
+        class="flex gap-0.5"
       >
         <div
           class="
