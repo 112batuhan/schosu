@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-row gap-0.5">
     <schedule-box
-      v-for="state in states"
-      v-bind:key="state.id"
-      @click="changeState(state.id)"
-      :colorString="colors[state.value]"
+      v-for="(state, index) in states"
+      v-bind:key="state"
+      @click="changeState(index)"
+      :colorString="colors[state]"
     />
   </div>
 </template>
@@ -16,35 +16,18 @@ export default {
   data: function () {
     return {
       colors: ["bg-red-600", "bg-green-600", "bg-yellow-500", "bg-gray-500"],
-
-      states: [
-        { id: 0, value: 0 },
-        { id: 1, value: 1 },
-        { id: 2, value: 2 },
-        { id: 3, value: 3 },
-        { id: 4, value: 0 },
-        { id: 5, value: 1 },
-        { id: 6, value: 2 },
-        { id: 7, value: 2 },
-        { id: 8, value: 2 },
-        { id: 9, value: 2 },
-        { id: 10, value: 2 },
-        { id: 11, value: 2 },
-        { id: 12, value: 2 },
-        { id: 13, value: 2 },
-        { id: 14, value: 2 },
-      ],
+      states: [1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 0, 0, 0, 0],
     };
   },
 
   props: {},
 
   methods: {
-    changeState: function (id) {
-      if (this.states[id].value++ > 3) {
-        this.states[id].value = 0;
+    changeState: function (index) {
+      if (this.states[index]++ > 3) {
+        this.states[index] = 0;
       }
-      console.log("colorchange wohoo " + this.states[id].value); // returns 'foo'
+      console.log("colorchange wohoo " + this.states[index]); // returns 'foo'
     },
   },
 

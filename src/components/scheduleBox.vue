@@ -8,6 +8,7 @@
       border-2 border-black
       rounded-lg
       flex-shrink-0
+      hover:border-red-600
     "
     :class="colorString"
   ></div>
